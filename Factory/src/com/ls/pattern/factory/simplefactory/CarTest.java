@@ -1,5 +1,8 @@
 package com.ls.pattern.factory.simplefactory;
 
+import com.ls.pattern.factory.model.Benz;
+import com.ls.pattern.factory.model.ICar;
+
 public class CarTest {
 
     public static void main(String[] args) {

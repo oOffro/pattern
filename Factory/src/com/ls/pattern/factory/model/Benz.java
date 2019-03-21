@@ -1,4 +1,4 @@
-package com.ls.pattern.factory.simplefactory;
+package com.ls.pattern.factory.model;
 
 public class Benz implements ICar {
     @Override

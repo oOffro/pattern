@@ -1,5 +1,9 @@
 package com.ls.pattern.factory.simplefactory;
 
+import com.ls.pattern.factory.model.Audi;
+import com.ls.pattern.factory.model.Benz;
+import com.ls.pattern.factory.model.ICar;
+
 /**
  * 汽车工厂
  */
