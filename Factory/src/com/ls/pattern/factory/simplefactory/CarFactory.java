@@ -1,7 +1,7 @@
 package com.ls.pattern.factory.simplefactory;
 
-import com.ls.pattern.factory.model.Audi;
-import com.ls.pattern.factory.model.Benz;
+import com.ls.pattern.factory.model.AudiCar;
+import com.ls.pattern.factory.model.BenzCar;
 import com.ls.pattern.factory.model.ICar;
 
 /**
@@ -17,10 +17,10 @@ public class CarFactory {
             return null;
         }
 
-        if ("Audi".equals(name)) {
-            return new Audi();
-        } else if ("Benz".equals(name)) {
-            return new Benz();
+        if ("AudiCar".equals(name)) {
+            return new AudiCar();
+        } else if ("BenzCar".equals(name)) {
+            return new BenzCar();
         }
 
         return null;
