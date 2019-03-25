@@ -5,7 +5,12 @@ package com.ls.pattern.singleton.lazy;
  */
 public class LazyInnerClassSingleton {
 
-    private LazyInnerClassSingleton() {}
+    private LazyInnerClassSingleton() {
+        // 禁止反射调用构造方法创建
+        if (LazyHandler.instance != null) {
+            throw new RuntimeException("不允许创建多个实例！");
+        }
+    }
 
     public static LazyInnerClassSingleton getInstance() {
         return LazyHandler.instance;
@@ -17,4 +22,10 @@ public class LazyInnerClassSingleton {
     private static class LazyHandler {
         private static LazyInnerClassSingleton instance = new LazyInnerClassSingleton();
     }
+
+    // 避免反序列话破坏单例，重写readResolve方法，返回已创建的实例
+    private Object readResolve() {
+        return LazyHandler.instance;
+    }
+
 }

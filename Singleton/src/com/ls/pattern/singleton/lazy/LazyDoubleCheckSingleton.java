@@ -6,7 +6,7 @@ package com.ls.pattern.singleton.lazy;
  */
 public class LazyDoubleCheckSingleton {
 
-    private static LazyDoubleCheckSingleton instance;
+    private static volatile LazyDoubleCheckSingleton instance;
 
     private LazyDoubleCheckSingleton() {}
 
